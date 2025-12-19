@@ -1,625 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500&display=swap"
-    rel="stylesheet">
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
-
 <body>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* ================= CONTRAST NAVBAR ================= */
+<style>
 
-    /* ================= CONTRAST NAVBAR ================= */
+/* ================= CONTRAST NAVBAR ================= */
 
-    .peace-navbar {
-      background: rgba(28, 27, 34, 0.92);
-      /* Dark contrast */
-      backdrop-filter: blur(14px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-      padding: 14px 0;
-      transition: all 0.3s ease;
-      z-index: 1000;
-    }
+/* ================= CONTRAST NAVBAR ================= */
 
-    /* Brand */
-    .brand-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.45rem;
-      font-weight: 600;
-      color: #f7f6fb;
-    }
+.peace-navbar {
+  background: rgba(28, 27, 34, 0.92); /* Dark contrast */
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  padding: 14px 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
 
-    .text-accent {
-      color: var(--accent);
-      /* gold */
-      font-size: 1.4rem;
-    }
+/* Brand */
+.brand-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #f7f6fb;
+}
 
-    /* Links */
-    .peace-navbar .nav-link {
-      font-weight: 500;
-      color: rgba(247, 246, 251, 0.85);
-      padding: 8px 0;
-      position: relative;
-      transition: color 0.3s ease;
-    }
+.text-accent {
+  color: var(--accent); /* gold */
+  font-size: 1.4rem;
+}
 
-    .peace-navbar .nav-link:hover,
-    .peace-navbar .nav-link.active {
-      color: #ffffff;
-    }
+/* Links */
+.peace-navbar .nav-link {
+  font-weight: 500;
+  color: rgba(247, 246, 251, 0.85);
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
 
-    /* Underline effect */
-    .peace-navbar .nav-link::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background: linear-gradient(90deg,
-          var(--primary),
-          var(--secondary));
-      transition: width 0.3s ease;
-    }
+.peace-navbar .nav-link:hover,
+.peace-navbar .nav-link.active {
+  color: #ffffff;
+}
 
-    .peace-navbar .nav-link:hover::after,
-    .peace-navbar .nav-link.active::after {
-      width: 100%;
-    }
+/* Underline effect */
+.peace-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+  transition: width 0.3s ease;
+}
 
-    /* Contact Button */
-    .btn-nav {
-      padding: 10px 22px !important;
-      border-radius: 30px;
-      background: linear-gradient(135deg,
-          var(--accent),
-          #a87316);
-      color: #1c1b22 !important;
-      font-weight: 600;
-      box-shadow: 0 6px 20px rgba(192, 132, 26, 0.45);
-    }
+.peace-navbar .nav-link:hover::after,
+.peace-navbar .nav-link.active::after {
+  width: 100%;
+}
 
-    .btn-nav:hover {
-      background: linear-gradient(135deg,
-          #a87316,
-          var(--accent));
-      transform: translateY(-2px);
-    }
+/* Contact Button */
+.btn-nav {
+  padding: 10px 22px !important;
+  border-radius: 30px;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    #a87316
+  );
+  color: #1c1b22 !important;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(192, 132, 26, 0.45);
+}
 
-    /* Mobile */
-    @media (max-width: 991px) {
-      .peace-navbar {
-        padding: 12px 0;
-      }
+.btn-nav:hover {
+  background: linear-gradient(
+    135deg,
+    #a87316,
+    var(--accent)
+  );
+  transform: translateY(-2px);
+}
 
-      .peace-navbar .navbar-nav {
-        padding-top: 15px;
-        gap: 14px;
-      }
+/* Mobile */
+@media (max-width: 991px) {
+  .peace-navbar {
+    padding: 12px 0;
+  }
 
-      .btn-nav {
-        width: 100%;
-        text-align: center;
-      }
-    }
+  .peace-navbar .navbar-nav {
+    padding-top: 15px;
+    gap: 14px;
+  }
 
-
-
-
-    /* REQUIRED COLORS (ADD ON TOP OR IN :root) */
-    :root {
-      --primary: #1f6f5b;
-      --secondary: #5b4b8a;
-      --accent: #c0841a;
-      /* 🔴 THIS WAS MISSING */
-    }
-
-    /* CONTACT BUTTON – FORCE VISIBILITY */
-    .peace-navbar .btn-nav {
-      display: inline-block;
-      padding: 10px 22px !important;
-      border-radius: 30px;
-      background: linear-gradient(135deg, var(--accent), #a87316);
-      color: #1c1b22 !important;
-      font-weight: 600;
-      box-shadow: 0 6px 20px rgba(192, 132, 26, 0.45);
-    }
-
-    .peace-navbar .btn-nav:hover {
-      background: linear-gradient(135deg, #a87316, var(--accent));
-      transform: translateY(-2px);
-    }
+  .btn-nav {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 
-    .section-tag {
-      display: block;
-      /* makes centering work */
-      text-align: center;
-      /* centers text */
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 2px;
-      color: #7a8f8a;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
 
-    /* Optional underline */
-    .section-tag::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 2px;
-      background: linear-gradient(90deg, #3a5a40, #588157);
-      margin: 8px auto 0;
-      /* centers underline */
-      border-radius: 2px;
-    }
+
+/* REQUIRED COLORS (ADD ON TOP OR IN :root) */
+:root {
+  --primary: #1f6f5b;
+  --secondary: #5b4b8a;
+  --accent: #c0841a;   /* 🔴 THIS WAS MISSING */
+}
+
+/* CONTACT BUTTON – FORCE VISIBILITY */
+.peace-navbar .btn-nav {
+  display: inline-block;
+  padding: 10px 22px !important;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--accent), #a87316);
+  color: #1c1b22 !important;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(192, 132, 26, 0.45);
+}
+
+.peace-navbar .btn-nav:hover {
+  background: linear-gradient(135deg, #a87316, var(--accent));
+  transform: translateY(-2px);
+}
+
+
+.section-tag {
+  display: block;              /* makes centering work */
+  text-align: center;          /* centers text */
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #7a8f8a;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* Optional underline */
+.section-tag::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #3a5a40, #588157);
+  margin: 8px auto 0;          /* centers underline */
+  border-radius: 2px;
+}
 
 
 
 
 
     section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .section-tag {
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 2px;
-      color: #7a8f8a;
-    }
-
-    .section-title {
-      font-size: 36px;
-      margin: 15px 0 50px;
-      color: #2c3e50;
-    }
-
-    /* Journey Section */
-    .journey-section {
-      background: #f7f9f8;
-    }
-
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .journey-card {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 16px;
-      text-align: left;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    }
-
-    .journey-card h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
-      color: #3a5a40;
-    }
-
-    .journey-card p {
-      color: #555;
-      line-height: 1.7;
-    }
-
-    /* Are Healings For Me */
-    .healing-for-me {
-      background: #ffffff;
-    }
-
-    .healing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .healing-card {
-      background: #f9faf9;
-      padding: 35px;
-      border-radius: 18px;
-      text-align: left;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-    }
-
-    .healing-card p {
-      color: #444;
-      line-height: 1.8;
-      font-size: 16px;
-    }
-
-    /* Stats Section */
-    .stats-section {
-      background: linear-gradient(135deg, #3a5a40, #588157);
-      color: #ffffff;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .stat-box h3 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .stat-box p {
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
-
-    .journey-icon {
-      width: 60px;
-      height: 60px;
-      background: #eaf4ec;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-
-    .journey-icon i {
-      font-size: 26px;
-      color: #3a5a40;
-    }
-
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .journey-card {
-      background: #ffffff;
-      padding: 35px 30px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .journey-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .journey-icon {
-      width: 70px;
-      height: 70px;
-      background: #eaf4ec;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 18px;
-    }
-
-    .journey-icon i {
-      font-size: 30px;
-      color: #3a5a40;
-    }
-
-    .journey-card h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
-      color: #2c3e50;
-    }
-
-    .journey-card p {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.7;
-    }
-
-
-
-
-
-
-
-    /* ---------- Base Colors ---------- */
-    :root {
-      --foreground: #1c1b22;
-      --background: #f7f6fb;
-      --lavender: #b9a7e6;
-      --rose-gold: #d9a5a5;
-    }
-
-    /* ---------- Footer Wrapper ---------- */
-    footer.bg-foreground {
-      background-color: var(--foreground);
-      color: var(--background);
-      padding: 4rem 1rem;
-      font-family: "Inter", sans-serif;
-    }
-
-    /* ---------- Container ---------- */
-    .container-custom {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* ---------- Grid Layout ---------- */
-    .grid {
-      display: grid;
-      gap: 3rem;
-    }
-
-    @media (min-width: 768px) {
-      .md\:grid-cols-4 {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .md\:col-span-2 {
-        grid-column: span 2;
-      }
-    }
-
-    /* ---------- Headings ---------- */
-    footer h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      font-family: "Playfair Display", serif;
-    }
-
-    /* ---------- Logo Section ---------- */
-    footer .font-serif {
-      font-family: "Playfair Display", serif;
-    }
-
-    footer p {
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.7;
-    }
-
-    /* ---------- Icons ---------- */
-    .text-lavender {
-      color: var(--lavender);
-    }
-
-    .text-rose-gold {
-      color: var(--rose-gold);
-    }
-
-    /* ---------- Links ---------- */
-    footer a {
-      text-decoration: none;
-      color: rgba(255, 255, 255, 0.7);
-      transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-      color: #ffffff;
-    }
-
-    /* ---------- Lists ---------- */
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .space-y-3 li {
-      margin-bottom: 0.75rem;
-    }
-
-    /* ---------- Flex Utilities ---------- */
-    .flex {
-      display: flex;
-    }
-
-    .items-center {
-      align-items: center;
-    }
-
-    .items-start {
-      align-items: flex-start;
-    }
-
-    .justify-center {
-      justify-content: center;
-    }
-
-    .gap-2 {
-      gap: 0.5rem;
-    }
-
-    .gap-3 {
-      gap: 0.75rem;
-    }
-
-    /* ---------- Divider ---------- */
-    .border-t {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .pt-8 {
-      padding-top: 2rem;
-    }
-
-    .mb-12 {
-      margin-bottom: 3rem;
-    }
-
-    /* ---------- Text Alignment ---------- */
-    .text-center {
-      text-align: center;
-    }
-
-    .text-background\/60 {
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    .text-background\/70 {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* ---------- Responsive ---------- */
-    @media (max-width: 768px) {
-      footer {
-        text-align: center;
-      }
-
-      footer .flex {
-        justify-content: center;
-      }
-    }
-
-
-
-
-    /* Footer Social Icons */
-    .social-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-    }
-
-    .social-icon:hover {
-      background: linear-gradient(135deg, #c0841a, #a87316);
-      color: #1c1b22;
-      transform: translateY(-3px);
-    }
-  </style>
-
-
-  <nav class="navbar navbar-expand-lg fixed-top peace-navbar navbar-dark">
-    <div class="container">
-
-
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
-        <i class="fa-solid fa-sparkles text-accent"></i>
-        <span class="brand-text">Peace Vision</span>
-      </a>
-
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#peaceNavbar"
-        aria-controls="peaceNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-      <div class="collapse navbar-collapse justify-content-end" id="peaceNavbar">
-        <ul class="navbar-nav align-items-lg-center gap-lg-4">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="journey.html">Journey</a>
-          </li>
-
-
-          <li class="nav-item">
-            <a class="nav-link btn-nav" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-
-
-  <!-- Space for fixed navbar -->
-  <div style="height:90px;"></div>
-  <span class="section-tag">Journey</span>
-  <div class="journey-grid">
-
-    <!-- Step 1 -->
-    <div class="journey-card">
-      <div class="journey-icon">
-        <i class="fa fa-comments"></i>
-      </div>
-      <h3>Step 1: Connect & Converse</h3>
-      <p>
-        Begin with a gentle one-on-one call where we understand your emotional
-        space and the support you truly need.
-      </p>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="journey-card">
-      <div class="journey-icon">
-        <i class="fa fa-heart"></i>
-      </div>
-      <h3>Step 2: Share Your Inner Landscape</h3>
-      <p>
-        Express your emotions, patterns, and energetic concerns through a guided
-        form for deeper understanding.
-      </p>
-    </div>
-
-    <!-- Step 3 -->
-    <div class="journey-card">
-      <div class="journey-icon">
-        <i class="fa fa-spa"></i>
-      </div>
-      <h3>Step 3: Experience a Cleansing Session</h3>
-      <p>
-        Receive a 15–20 minute calming cleansing session introducing Peace
-        Vision’s healing process.
-      </p>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="journey-card">
-      <div class="journey-icon">
-        <i class="fa fa-seedling"></i>
-      </div>
-      <h3>Step 4: Begin Your Personal Healing Path</h3>
-      <p>
-        Move into personalised healing sessions designed for your emotional and
-        energetic growth.
-      </p>
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-tag {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #7a8f8a;
+}
+
+.section-title {
+  font-size: 36px;
+  margin: 15px 0 50px;
+  color: #2c3e50;
+}
+
+/* Journey Section */
+.journey-section {
+  background: #f7f9f8;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.journey-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.journey-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #3a5a40;
+}
+
+.journey-card p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Are Healings For Me */
+.healing-for-me {
+  background: #ffffff;
+}
+
+.healing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.healing-card {
+  background: #f9faf9;
+  padding: 35px;
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.healing-card p {
+  color: #444;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* Stats Section */
+.stats-section {
+  background: linear-gradient(135deg, #3a5a40, #588157);
+  color: #ffffff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.stat-box h3 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.journey-icon {
+  width: 60px;
+  height: 60px;
+  background: #eaf4ec;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.journey-icon i {
+  font-size: 26px;
+  color: #3a5a40;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.journey-card {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+.journey-icon {
+  width: 70px;
+  height: 70px;
+  background: #eaf4ec;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.journey-icon i {
+  font-size: 30px;
+  color: #3a5a40;
+}
+
+.journey-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.journey-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+
+
+
+
+
+
+/* ---------- Base Colors ---------- */
+:root {
+  --foreground: #1c1b22;
+  --background: #f7f6fb;
+  --lavender: #b9a7e6;
+  --rose-gold: #d9a5a5;
+}
+
+/* ---------- Footer Wrapper ---------- */
+footer.bg-foreground {
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 4rem 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------- Container ---------- */
+.container-custom {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ---------- Grid Layout ---------- */
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2;
+  }
+}
+
+/* ---------- Headings ---------- */
+footer h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* ---------- Logo Section ---------- */
+footer .font-serif {
+  font-family: "Playfair Display", serif;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+/* ---------- Icons ---------- */
+.text-lavender {
+  color: var(--lavender);
+}
+
+.text-rose-gold {
+  color: var(--rose-gold);
+}
+
+/* ---------- Links ---------- */
+footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/* ---------- Lists ---------- */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.space-y-3 li {
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Flex Utilities ---------- */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+/* ---------- Divider ---------- */
+.border-t {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+/* ---------- Text Alignment ---------- */
+.text-center {
+  text-align: center;
+}
+
+.text-background\/60 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.text-background\/70 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+
+  footer .flex {
+    justify-content: center;
+  }
+}
+
+
+
+
+/* Footer Social Icons */
+.social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.social-icon:hover {
+  background: linear-gradient(135deg, #c0841a, #a87316);
+  color: #1c1b22;
+  transform: translateY(-3px);
+}
+
+
+
+</style>    
+
+
+<nav class="navbar navbar-expand-lg fixed-top peace-navbar">
+  <div class="container">
+    
+  
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+      <i class="fa-solid fa-sparkles text-accent"></i>
+      <span class="brand-text">Peace Vision</span>
+    </a>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#peaceNavbar" aria-controls="peaceNavbar" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  
+    <div class="collapse navbar-collapse justify-content-end" id="peaceNavbar">
+      <ul class="navbar-nav align-items-lg-center gap-lg-4">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Journey.html">Journey</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-nav" href="contact.html">Contact</a>
+        </li>
+      </ul>
     </div>
 
   </div>
+</nav>
 
-  <!-- Are Healings For Me Section -->
-  <!-- <section class="healing-for-me">
+
+<!-- Space for fixed navbar -->
+<div style="height:90px;"></div>
+<span class="section-tag">Journey</span>
+<div class="journey-grid">
+
+  <!-- Step 1 -->
+  <div class="journey-card">
+    <div class="journey-icon">
+      <i class="fa fa-comments"></i>
+    </div>
+    <h3>Step 1: Connect & Converse</h3>
+    <p>
+      Begin with a gentle one-on-one call where we understand your emotional
+      space and the support you truly need.
+    </p>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="journey-card">
+    <div class="journey-icon">
+      <i class="fa fa-heart"></i>
+    </div>
+    <h3>Step 2: Share Your Inner Landscape</h3>
+    <p>
+      Express your emotions, patterns, and energetic concerns through a guided
+      form for deeper understanding.
+    </p>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="journey-card">
+    <div class="journey-icon">
+      <i class="fa fa-spa"></i>
+    </div>
+    <h3>Step 3: Experience a Cleansing Session</h3>
+    <p>
+      Receive a 15–20 minute calming cleansing session introducing Peace
+      Vision’s healing process.
+    </p>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="journey-card">
+    <div class="journey-icon">
+      <i class="fa fa-seedling"></i>
+    </div>
+    <h3>Step 4: Begin Your Personal Healing Path</h3>
+    <p>
+      Move into personalised healing sessions designed for your emotional and
+      energetic growth.
+    </p>
+  </div>
+
+</div>
+
+<!-- Are Healings For Me Section -->
+<!-- <section class="healing-for-me">
   <span class="section-tag">understanding healing</span>
   <h2 class="section-title">Are Healings For Me?</h2>
 
@@ -655,75 +653,75 @@
 
 
 
-  <section class="healing-for-me">
-    <span class="section-tag">understanding healing</span>
-    <h2 class="section-title">Are Healings For Me?</h2>
+<section class="healing-for-me">
+  <span class="section-tag">understanding healing</span>
+  <h2 class="section-title">Are Healings For Me?</h2>
 
-    <div class="journey-grid">
+  <div class="journey-grid">
 
-      <!-- Card 1 -->
-      <div class="journey-card">
-        <div class="journey-icon">
-          <i class="fa fa-user-circle"></i>
-        </div>
-        <h3>Who Can Receive Healing?</h3>
-        <p>
-          Healings are for anyone feeling overwhelmed, stuck, emotionally heavy,
-          or disconnected. No spiritual background or prior experience is needed.
-          If you feel, sense, or wonder — you belong here.
-        </p>
+    <!-- Card 1 -->
+    <div class="journey-card">
+      <div class="journey-icon">
+        <i class="fa fa-user-circle"></i>
       </div>
-
-      <!-- Card 2 -->
-      <div class="journey-card">
-        <div class="journey-icon">
-          <i class="fa fa-hands-helping"></i>
-        </div>
-        <h3>Personalised Healing Approach</h3>
-        <p>
-          Peace Vision healing is never one-size-fits-all. Every session is tailored
-          to your emotional state, energy patterns, and life experiences — offered
-          with compassion and without judgment.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="journey-card">
-        <div class="journey-icon">
-          <i class="fa fa-brain"></i>
-        </div>
-        <h3>How Healing Supports You</h3>
-        <p>
-          Healing helps release emotional blocks, anxiety, trauma, and repeated
-          life patterns — bringing clarity, balance, and reconnection with your
-          authentic self.
-        </p>
-      </div>
-
+      <h3>Who Can Receive Healing?</h3>
+      <p>
+        Healings are for anyone feeling overwhelmed, stuck, emotionally heavy,
+        or disconnected. No spiritual background or prior experience is needed.
+        If you feel, sense, or wonder — you belong here.
+      </p>
     </div>
-  </section>
 
-  <!-- Stats Section -->
-  <section class="stats-section">
-    <div class="stats-grid">
-      <div class="stat-box">
-        <h3>25+</h3>
-        <p>Years Of Experience</p>
+    <!-- Card 2 -->
+    <div class="journey-card">
+      <div class="journey-icon">
+        <i class="fa fa-hands-helping"></i>
       </div>
-      <div class="stat-box">
-        <h3>101+</h3>
-        <p>Souls Healed</p>
-      </div>
-      <div class="stat-box">
-        <h3>27+</h3>
-        <p>Services Offered</p>
-      </div>
-      <div class="stat-box">
-        <h3>51+</h3>
-        <p>Spiritual Modalities</p>
-      </div>
+      <h3>Personalised Healing Approach</h3>
+      <p>
+        Peace Vision healing is never one-size-fits-all. Every session is tailored
+        to your emotional state, energy patterns, and life experiences — offered
+        with compassion and without judgment.
+      </p>
     </div>
-  </section>
+
+    <!-- Card 3 -->
+    <div class="journey-card">
+      <div class="journey-icon">
+        <i class="fa fa-brain"></i>
+      </div>
+      <h3>How Healing Supports You</h3>
+      <p>
+        Healing helps release emotional blocks, anxiety, trauma, and repeated
+        life patterns — bringing clarity, balance, and reconnection with your
+        authentic self.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-box">
+      <h3>25+</h3>
+      <p>Years Of Experience</p>
+    </div>
+    <div class="stat-box">
+      <h3>101+</h3>
+      <p>Souls Healed</p>
+    </div>
+    <div class="stat-box">
+      <h3>27+</h3>
+      <p>Services Offered</p>
+    </div>
+    <div class="stat-box">
+      <h3>51+</h3>
+      <p>Spiritual Modalities</p>
+    </div>
+  </div>
+</section>
 
 
 
@@ -748,17 +746,11 @@
         <div>
           <h4 class="text-lg font-serif font-semibold mb-4">Quick Links</h4>
           <ul class="space-y-3">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li>
-              <a href="journey.html">
-                Journey
-              </a>
-            </li>
-
-
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" class="text-background/70 hover:text-background transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-background/70 hover:text-background transition-colors">About</a></li>
+            <li><a href="services.html" class="text-background/70 hover:text-background transition-colors">Services</a></li>
+            <li><a href="journey.html" class="text-background/70 hover:text-background transition-colors">Journey</a></li>
+            <li><a href="contact.html" class="text-background/70 hover:text-background transition-colors">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -786,16 +778,16 @@
                 </path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>Your Location</li>
-            <li class="flex items-start gap-3 text-background/70">
-              <span class="fw-semibold">Follow Us</span>
-            </li>
+              <li class="flex items-start gap-3 text-background/70">
+  <span class="fw-semibold">Follow Us</span>
+</li>
 
-            <li class="flex items-center gap-3">
-              <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
-              <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-            </li>
+<li class="flex items-center gap-3">
+  <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+  <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+</li>
 
           </ul>
         </div>
@@ -818,5 +810,4 @@
 
 
 </body>
-
 </html>
