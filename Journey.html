@@ -122,6 +122,9 @@
             }
         }
 
+      .stats-section {
+    padding-bottom: 120px;
+}
 
 
 
@@ -554,16 +557,30 @@
             /* ensure content pushes footer down */
         }
 
-        /* Additional bottom padding so mobile view shows footer */
-        .stats-section {
-            padding-bottom: 120px;
-        }
+       
 
         /* Better visual separation */
         footer {
             margin-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.15);
         }
+
+        body {
+    padding-top: 80px; /* desktop */
+}
+
+
+@media (max-width: 576px) {
+    .journey-card,
+    .healing-card {
+        padding: 24px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+
     </style>
 
 
@@ -596,8 +613,7 @@
 
     <div class="main-content-wrapper">
 
-        <!-- Space for fixed navbar -->
-        <div style="height:90px;"></div>
+    
         <section class="journey-section">
             <span class="section-tag">Journey</span>
             <div class="journey-grid">
@@ -685,53 +701,10 @@
                 </div>
             </div>
         </section>
-        <section class="healing-for-me">
-            <span class="section-tag">understanding healing</span>
-            <h2 class="section-title">Are Healings For Me?</h2>
+      <section class="healing-for-me">
+   ...
+</section>
 
-            <div class="journey-grid">
-
-                <!-- Card 1 -->
-                <div class="journey-card">
-                    <div class="journey-icon">
-                        <i class="fa fa-user-circle"></i>
-                    </div>
-                    <h3>Who Can Receive Healing?</h3>
-                    <p>
-                        Healings are for anyone feeling overwhelmed, stuck, emotionally heavy,
-                        or disconnected. No spiritual background or prior experience is needed.
-                        If you feel, sense, or wonder — you belong here.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="journey-card">
-                    <div class="journey-icon">
-                        <i class="fa fa-hands-helping"></i>
-                    </div>
-                    <h3>Personalised Healing Approach</h3>
-                    <p>
-                        Peace Vision healing is never one-size-fits-all. Every session is tailored
-                        to your emotional state, energy patterns, and life experiences — offered
-                        with compassion and without judgment.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="journey-card">
-                    <div class="journey-icon">
-                        <i class="fa fa-brain"></i>
-                    </div>
-                    <h3>How Healing Supports You</h3>
-                    <p>
-                        Healing helps release emotional blocks, anxiety, trauma, and repeated
-                        life patterns — bringing clarity, balance, and reconnection with your
-                        authentic self.
-                    </p>
-                </div>
-
-            </div>
-        </section>
 
         <!-- Stats Section -->
         <section class="stats-section">
