@@ -553,9 +553,23 @@
         }
 
         .main-content-wrapper {
-            min-height: calc(100vh - 200px);
-            /* ensure content pushes footer down */
-        }
+    min-height: auto;
+}
+   .healing-for-me {
+    display: none;
+}
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        min-height: auto;
+    }
+
+    footer {
+        margin-top: 40px;
+        position: relative;
+        z-index: 20;
+    }
+}
+
 
 
 
@@ -702,9 +716,9 @@
                 </div>
             </div>
         </section>
-        <section class="healing-for-me">
+        <!-- <section class="healing-for-me">
             ...
-        </section>
+        </section> -->
 
 
         <!-- Stats Section -->
@@ -760,8 +774,12 @@
                                 class="text-background/70 hover:text-background transition-colors">About</a></li>
                         <li><a href="services.html"
                                 class="text-background/70 hover:text-background transition-colors">Services</a></li>
-                        <li><a href="Journey.html"
-                                class="text-background/70 hover:text-background transition-colors">Journey</a></li>
+                        <li>
+                            <a href="journey.html" class="text-background/70 hover:text-background transition-colors">
+                                Journey
+                            </a>
+                        </li>
+
 
                         <li><a href="contact.html"
                                 class="text-background/70 hover:text-background transition-colors">Contact</a></li>
