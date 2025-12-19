@@ -17,8 +17,14 @@
 <style>
 
 /* ================= CONTRAST NAVBAR ================= */
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.4);
+}
 
-/* ================= CONTRAST NAVBAR ================= */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
 
 .peace-navbar {
   background: rgba(28, 27, 34, 0.92); /* Dark contrast */
@@ -520,40 +526,30 @@ footer ul {
 </style>    
 
 
-<nav class="navbar navbar-expand-lg fixed-top peace-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top peace-navbar">
   <div class="container">
-    
-  
-    <a class="navbar-brand d-flex align-items-center gap-2" href="journey.html">
+
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
       <i class="fa-solid fa-sparkles text-accent"></i>
       <span class="brand-text">Peace Vision</span>
     </a>
 
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#peaceNavbar" aria-controls="peaceNavbar" aria-expanded="false"
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#peaceNavbar"
+      aria-controls="peaceNavbar"
+      aria-expanded="false"
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-  
     <div class="collapse navbar-collapse justify-content-end" id="peaceNavbar">
       <ul class="navbar-nav align-items-lg-center gap-lg-4">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="journey.html">Journey</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn-nav" href="contact.html">Contact</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="journey.html">Journey</a></li>
+        <li class="nav-item"><a class="nav-link btn-nav" href="contact.html">Contact</a></li>
       </ul>
     </div>
 
